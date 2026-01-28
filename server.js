@@ -13,7 +13,7 @@ class Server {
             const parsedUrl = url.parse(req.url, true);
 
             // Endpoint: /COMP4537/labs/3/getDate/
-            if (parsedUrl.pathname === '/COMP4537/labs/3/getDate/') {
+            if (parsedUrl.pathname === '/COMP4537/labs/3/getDate' ||parsedUrl.pathname === '/COMP4537/labs/3/getDate/' ) {
                 const name = parsedUrl.query.name;
 
                 if (!name) {
@@ -40,3 +40,4 @@ class Server {
 
 const app = new Server(3000);
 app.start();
+
